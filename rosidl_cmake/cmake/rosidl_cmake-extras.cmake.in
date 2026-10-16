@@ -2,3 +2,4 @@
 
 set(@PROJECT_NAME@_IDL_FILES "@_rosidl_cmake_IDL_FILES@")
 set(@PROJECT_NAME@_INTERFACE_FILES "@_rosidl_cmake_INTERFACE_FILES@")
+set(@PROJECT_NAME@_DATADIR "@_rosidl_cmake_install_prefix@/share/@PROJECT_NAME@")

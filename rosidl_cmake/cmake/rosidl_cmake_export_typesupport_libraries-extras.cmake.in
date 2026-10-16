@@ -18,7 +18,7 @@ if(NOT _exported_typesupport_libraries STREQUAL "")
       unset(_@PROJECT_NAME@_exported_typesupport_library CACHE)
       find_library(
         _@PROJECT_NAME@_exported_typesupport_library NAMES "${_library}"
-        PATHS "${@PROJECT_NAME@_DIR}/../../../lib"
+        PATHS "@_rosidl_cmake_install_prefix@/lib"
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH
       )
 

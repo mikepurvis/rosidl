@@ -31,6 +31,10 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+# Where the extras find this package's executable, Python module and
+# templates: relative to the installed CMake config, or absolute when the
+# config files are installed apart (AMENT_CMAKE_CONFIG_INSTALL_PREFIX).
+ament_package_install_prefix(_install_prefix)
 ament_package(
   CONFIG_EXTRAS "rosidl_generator_c-extras.cmake.in"
 )

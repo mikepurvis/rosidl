@@ -13,6 +13,7 @@
 # limitations under the License.
 
 # generate and register extra file for typesupport libraries
+ament_package_install_prefix(_rosidl_cmake_install_prefix)
 set(_generated_extra_file
   "${CMAKE_CURRENT_BINARY_DIR}/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
 configure_file(

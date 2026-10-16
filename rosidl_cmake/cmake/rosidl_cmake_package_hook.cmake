@@ -13,6 +13,10 @@
 # limitations under the License.
 
 # generate and register extra file for rosidl generation
+# Interface files are installed to share/${PROJECT_NAME}. Consumers find them
+# through ${PROJECT_NAME}_DATADIR (see rosidl_find_package_idl), which follows
+# the install prefix even when the CMake config files are installed elsewhere.
+ament_package_install_prefix(_rosidl_cmake_install_prefix)
 set(_generated_extra_file
   "${CMAKE_CURRENT_BINARY_DIR}/rosidl_cmake/rosidl_cmake-extras.cmake")
 configure_file(

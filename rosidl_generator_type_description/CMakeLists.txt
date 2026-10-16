@@ -15,6 +15,10 @@ if(BUILD_TESTING)
   ament_add_pytest_test(pytest_type_hash_generator test)
 endif()
 
+# Where the extras find this package's executable, Python module and
+# templates: relative to the installed CMake config, or absolute when the
+# config files are installed apart (AMENT_CMAKE_CONFIG_INSTALL_PREFIX).
+ament_package_install_prefix(_install_prefix)
 ament_package(
   CONFIG_EXTRAS "${PROJECT_NAME}-extras.cmake.in"
 )
